@@ -7,7 +7,6 @@ import Modal from '../Modal/Modal';
 // import css from './App.module.css';
 import Loader from 'components/Loader/Loader';
 import Button from 'components/Button/Button';
-import { setSelectionRange } from '@testing-library/user-event/dist/utils';
 
 const App = () => {
   const [image, setImage] = useState([]);

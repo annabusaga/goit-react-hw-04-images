@@ -1,7 +1,6 @@
 import { ColorRing } from 'react-loader-spinner';
 
 import React from 'react';
-import { useState } from 'react';
 
 export default function Loader() {
   return (
