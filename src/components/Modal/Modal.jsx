@@ -4,12 +4,6 @@ import css from './Modal.module.css';
 // import { PropTypes } from 'prop-types';
 
 const Modal = ({ modalOnClick, largeImageURL, tags }) => {
-  const onClose = event => {
-    if (event.code === 'Escape') {
-      modalOnClick();
-    }
-  };
-
   const handlerClick = event => {
     if (event.target === event.currentTarget) {
       modalOnClick();
@@ -17,6 +11,11 @@ const Modal = ({ modalOnClick, largeImageURL, tags }) => {
   };
 
   useEffect(() => {
+    const onClose = event => {
+      if (event.code === 'Escape') {
+        modalOnClick();
+      }
+    };
     window.addEventListener('keydown', onClose);
 
     return () => {
