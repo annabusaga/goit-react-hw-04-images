@@ -65,6 +65,10 @@ const App = () => {
           value,
           page,
         });
+        if (hits.length === 0) {
+          return alert("sorry, we didn't found anything");
+        }
+
         if (hits.length) {
           setIsLoadMoreShow(page !== Math.ceil(totalHits / 12));
           setImage(prev => [...prev, ...makeNormalizedImages(hits)]);
